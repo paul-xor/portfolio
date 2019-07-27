@@ -1,3 +1,26 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+  .section-color {
+    padding-top:100px;
+    height:75vh;
+    color: #333; 
+    background-color: rgb(226, 222, 222);
+  }
+  
+  .section-white {
+    padding-top:100px;
+    height:75vh;
+    color: black; 
+    background-color: #fff;
+  }
+
+  .fixed-box {
+    position: fixed;
+    bottom: 30px;
+    right: 0;
+    width: 85px;
+    // border: 3px solid #73AD21;
+  }
