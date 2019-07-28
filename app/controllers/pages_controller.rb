@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  
   def main
   end
 
@@ -7,4 +8,10 @@ class PagesController < ApplicationController
 
   def contacts
   end
+
+  def index
+    @projects = Project.all
+    @counter = 0
+  end
+
 end
