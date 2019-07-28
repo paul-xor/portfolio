@@ -2,22 +2,37 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.section-color-flex {
+  padding-top:100px;
+  //height:75vh;
+  color: #333; 
+  background-color: rgb(226, 222, 222);
+  padding-bottom:80px;
+}
 
-  .section-color {
+.section-white-flex {
+  padding-top:100px;
+  //height:75vh;
+  color: black; 
+  background-color: #fff;
+  padding-bottom:80px;
+}
+
+.section-color {
     padding-top:100px;
     height:75vh;
     color: #333; 
     background-color: rgb(226, 222, 222);
   }
   
-  .section-white {
+.section-white {
     padding-top:100px;
     height:75vh;
     color: black; 
     background-color: #fff;
   }
 
-  .fixed-box {
+.fixed-box {
     position: fixed;
     bottom: 30px;
     right: 0;
