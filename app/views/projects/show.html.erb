@@ -20,5 +20,9 @@
   <%= @project.git_link %>
 </p>
 
+<% if @project.technologies.any? %>
+<p>Technologies: <%= render @project.technologies %> </p>
+<% end %>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
