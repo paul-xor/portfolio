@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :technologies
   root 'pages#main'
   devise_for :users
   resources :projects
