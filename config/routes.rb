@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  root 'pages#main'
+  resources :technologies
   devise_for :users
   resources :projects
+  get '/main', to: 'pages#main'
   get '/about', to: 'pages#about'
   get '/contacts', to: 'pages#contacts'
-  get '/index', to: 'pages#index'
+  root 'pages#index'
 end

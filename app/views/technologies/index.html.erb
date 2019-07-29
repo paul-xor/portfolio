@@ -1,0 +1,42 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+    <h1>Technologies</h1>
+
+    <div align="center">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Technology</th>
+                <th>Edit</th>
+                <th>Delete</th>
+                <th></th>
+              </tr>
+            </thead>
+          <tbody>
+            <% @technologies.each do |technology| %>
+            <tr>
+              <td><%= technology.name %></td>
+              <td><%= link_to 'Edit' , edit_technology_path(technology),
+                                class: "waves-effect waves-light btn" %></td>
+              <td><%= link_to 'Delete', technology_path(technology), method: :delete, 
+                                data: {confirm: 'Are you sure?'},
+                                class: "waves-effect waves-light btn" %></td>
+              <td></td>
+            </tr>
+            <% end %>
+            
+          </tbody>
+        </table>
+        <div class="valign-wrapper">
+          <%= link_to 'New Technology', new_technology_path, 
+                                class: "waves-effect waves-light btn" %>
+        </div>
+        
+    </div>
+
+    <br>
+
+  
+  
+</div>
