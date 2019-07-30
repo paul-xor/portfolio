@@ -1,49 +1,68 @@
 
-<div class='container'>
 
-<%= form_with(model: project, local: true) do |form| %>
-  <% if project.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(project.errors.count, "error") %> prohibited this project from being saved:</h2>
 
-      <ul>
-      <% project.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<div class="row">
+    <div class=col-sm-12 >
+        <%= form_for @project, html: { multipart: true } do |f| %>
+            <div class="form-group row">
+                <div class="col-form-label col-sm-2">
+                  <%= f.label :name %>
+                </div>
+                <div class="col-sm-10">
+                  <%= f.text_field :name, class: 'form-control', placeholder: 'Post name', autofocus: true %>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-form-label col-sm-2">
+                    <%= f.label :description %>
+                </div>
+                <div class="col-sm-10">
+                    <%= f.text_area :description, cols: 50, rows: 4, class: "form-control", placeholder: "Post description"%>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-form-label col-sm-2">
+                    <%= f.label :site_link %>
+                </div>
+                <div class="col-sm-10">
+                    <%= f.text_field :site_link, class: 'form-control', placeholder: 'Post site_link', autofocus: true %>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-form-label col-sm-2">
+                    <%= f.label :git_link %>
+                </div>
+                <div class="col-sm-10">
+                    <%= f.text_field :git_link, class: 'form-control', placeholder: 'Post git_link', autofocus: true %>
+                </div>
+            </div>
+            
+             <div class="form-group row">
+                <div class="col-form-label col-sm-2">
+                </div>
+        
+                <div class="position-relative col-sm-10 mt-3">
+                    <%= f.collection_check_boxes :technology_ids, Technology.all, :id, :name do |cb| %>
+                        <% cb.label(class: "checkbox-inline input_checkbox") {cb.check_box(class: "checkbox ml-5") + 
+                        " " + cb.text}%>
+                    <% end %>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-form-label col-sm-2">
+                </div>
+        
+                <div class="position-relative col-sm-10 mt-3">
+                    <%= f.submit class:'btn btn-outline-success btn-sm' %>
+                </div>
+            </div>
+        <% end %>
+        
+        <div align="center">
+            [<%= link_to 'Cancel request and return to project listing', projects_path %>]
+        </div>
+        
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :site_link %>
-    <%= form.text_field :site_link %>
-  </div>
-
-  <div class="field">
-    <%= form.label :git_link %>
-    <%= form.text_field :git_link %>
-  </div>
-  
-  <div class="action">
-    
-    <%= form.collection_check_boxes :technology_ids, Technology.all, :id, :name do |cb| %>
-    <% cb.label(class:"checkbox input_checkbox") {cb.check_box(class:"checkbox")+cb.text} %>
-    <% end %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-
 </div>
+

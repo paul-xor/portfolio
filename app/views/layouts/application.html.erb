@@ -4,7 +4,7 @@
     <title>La5com</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -17,7 +17,10 @@
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
         <%= yield %>
-      
+        
+        <div class="container">
+          <%= debug(params) if Rails.env.development? %>
+        </div>
     </main>
       <%= render 'layouts/footer' %>
   </body>

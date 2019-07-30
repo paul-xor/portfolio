@@ -1,41 +1,27 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark ">
+  <a class="navbar-brand" href="#">Portfolio</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
-  <li><a href="#">one</a></li>
-  <li><a href="#">two</a></li>
-  <li class="divider"></li>
-  <li><a href="#">three</a></li>
-</ul>
-
-<ul id="dropdown2" class="dropdown-content">
-  <li><a href="#!">one</a></li>
-  <li><a href="#!">two</a></li>
-  <li class="divider"></li>
-  <li><a href="#!">three</a></li>
-</ul>
-
-<ul class="sidenav" id="mobile-demo">
-    <li><a href="#marketing_blog">Marketing Blog</a></li>
-    <li><a href="#contacts">Contacts</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Account<i class="material-icons right">arrow_drop_down</i></a></li>
-</ul>
-
-<div class="navbar-fixed">
-<nav>
-    <div class="container">
-        <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Portfolio</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul id="section table-of-contents nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#marketing_blog">Marketing Blog</a></li>
-            <li><a href="#contacts">Contacts</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
-            <%# link_to 'About', about_path %>
-            <%# link_to 'Contacts', contacts_path %>
-        </ul>
-        </div>
-    </div>
+  <div class="collapse navbar-collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right mr-1">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
 </nav>
-</div>
