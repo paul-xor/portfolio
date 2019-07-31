@@ -1,7 +1,12 @@
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:view]
   before_action :set_project, only: [:show, :edit, :update, :destroy,]
 
+  def view
+    @projects = Project.all
+    @technologies = Technology.all
+    @counter = 0
+  end
 
   def index
     @projects = Project.all

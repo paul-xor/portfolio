@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   
+
   def main
   end
 
@@ -12,18 +13,9 @@ class PagesController < ApplicationController
   def index
     @projects = Project.all
     @counter = 0
+    @technologies = Technology.all
 
   end
 
-  private
-    
-    def set_project
-      @project = Project.find(params[:id])
-    end
-
-  
-    def project_params
-      params.require(:project).permit(:name, :description, :site_link, :git_link, technology_ids: [])
-    end
 
 end
