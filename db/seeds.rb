@@ -19,7 +19,7 @@ views on an individual subject. Blog site build on Ruby on Rails & PostgreSQL
 ],
 [ "STARTDB", 
 "DESCRIPTION: The app is fetching data from 
-swapi API: " https://swapi.co " service. Using Information about a Star Wars 
+swapi API: https://swapi.co  service. Using Information about a Star Wars 
 characters(planets and etc) downloaded from the API and placed in the React 
 components. Which are independent of each other, 
 and if an error occurs within a particular component, а message will be arised 
@@ -53,7 +53,7 @@ project_list.each do |name, description, site_link, git_link|
 end
 
 tech_list = [
-  [React],[PostgreSQL],[NodeJS],[Ruby On Rails],[Bootstrap],[JavaScript]
+  ["React"],["PostgreSQL"],["NodeJS"],["Ruby On Rails"],["Bootstrap"],["JavaScript"]
 ]
 
 tech_list.each do |name|
