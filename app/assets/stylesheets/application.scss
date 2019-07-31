@@ -32,8 +32,8 @@
 }
 
 .footer{
-  background: #000;
-  color: #777;
+  background: #555556;
+  color: #fff;
   // margin-top: 45px;
   // padding-top: 5px;
   // border-top: 1px solid #eaeaea;
@@ -56,4 +56,10 @@
 #social-icons a {
   float: left;
   margin-left: 25px;
+}
+.footer-b {
+  background: #000;
+  color: #777;
+  font-family: 'Encode Sans Semi Expanded', sans-serif !important;
+  
 }
