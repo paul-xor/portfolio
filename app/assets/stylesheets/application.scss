@@ -30,3 +30,30 @@
     text-transform: uppercase;
     color: #fff;
 }
+
+.footer{
+  background: #000;
+  color: #777;
+  // margin-top: 45px;
+  // padding-top: 5px;
+  // border-top: 1px solid #eaeaea;
+}
+.footer h3{
+  margin-top: 35px;
+  color: #fff;
+  text-align: left;
+  font-family: 'Encode Sans Semi Expanded', sans-serif !important;
+}
+.footer p{
+  //color: #fff;
+  text-align: left;
+  font-family: 'Encode Sans Semi Expanded', sans-serif !important;
+}
+.footer a:hover{
+  
+  color: #775;
+}
+#social-icons a {
+  float: left;
+  margin-left: 25px;
+}
